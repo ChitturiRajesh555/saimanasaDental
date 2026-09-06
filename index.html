@@ -6,8 +6,8 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
 	<!-- browser-theme-color for WordPress -->
-	<meta name="theme-color" content="#c1a43e">
-	<meta name="msapplication-navbutton-color" content="#c1a43e">
+	<meta name="theme-color" content="#d71920">
+	<meta name="msapplication-navbutton-color" content="#d71920">
 	<meta name="mobile-web-app-capable" content="yes">
 	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 
@@ -730,7 +730,7 @@
 		}
 
 		.hm-bran .elementor-icon-list-icon i {
-			background: #c1a43e !important;
+			background: #d71920 !important;
 		}
 
 		.single-post .pbmit-title-bar-wrapper .pbmit-breadcrumb {
@@ -766,12 +766,12 @@
 		}
 
 		.wpforms-submit {
-			background-color: #c1a43e !important;
+			background-color: #d71920 !important;
 			color: #000 !important;
 		}
 
 		:root {
-			--pbmit-smiliz-global-color: #c1a43e;
+			--pbmit-smiliz-global-color: #d71920;
 			--pbmit-smiliz-global-color-rgb: 193, 164, 62;
 		}
 	</style>
@@ -872,7 +872,7 @@
 
 .custom-section-heading .sub-title {
     display: inline-block;
-	    color: #c1a43e;
+	    color: #d71920;
     font-size: 15px;
     font-weight: 600;
     margin-bottom: 12px;
@@ -918,7 +918,7 @@
 .custom-service-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 15px 35px rgba(0,0,0,0.10);
-	    border-color: #c1a43e;
+	    border-color: #d71920;
 }
 
 .custom-service-image {
@@ -958,11 +958,99 @@
     color: #777;
 }
 
+/* =====================================
+   TABLET VIEW
+===================================== */
 
+@media (max-width: 992px) {
+
+    .custom-services-section {
+        padding: 70px 0;
+    }
+
+    .custom-services-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 25px;
+    }
+
+    .custom-section-heading h2 {
+        font-size: 34px;
+    }
+
+}
+
+
+/* =====================================
+   MOBILE VIEW
+===================================== */
+
+@media (max-width: 768px) {
+
+    .custom-services-section {
+        padding: 60px 0;
+    }
+
+    .custom-container {
+        padding: 0 18px;
+    }
+
+    .custom-section-heading {
+        margin-bottom: 35px;
+    }
+
+    .custom-section-heading h2 {
+        font-size: 30px;
+    }
+
+    .custom-section-heading p {
+        font-size: 15px;
+    }
+
+    .custom-services-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+}
+
+
+/* =====================================
+   SMALL MOBILE VIEW
+===================================== */
+
+@media (max-width: 480px) {
+
+    .custom-services-section {
+        padding: 50px 0;
+    }
+
+    .custom-container {
+        padding: 0 15px;
+    }
+
+    .custom-section-heading .sub-title {
+        font-size: 13px;
+    }
+
+    .custom-section-heading h2 {
+        font-size: 26px;
+    }
+
+    .custom-section-heading p {
+        font-size: 14px;
+        line-height: 1.7;
+    }
+
+    .custom-services-grid {
+        gap: 18px;
+    }
+}
+
+</style>
 
 <!-- =========================
      FAQ SECTION CSS
-========================= -->
+======================= -->
 
 <style>
 
@@ -1667,6 +1755,390 @@
 </style>
 
 <style>
+	/* =========================================
+   SAI MANASA DOCTOR SECTION
+========================================= */
+
+.sai-doctor-section {
+    width: 100%;
+    padding: 80px 20px;
+    background: #11283d;
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+}
+
+
+/* =========================================
+   MAIN CONTAINER
+========================================= */
+
+.sai-doctor-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: 380px 1fr;
+
+    gap: 70px;
+
+    align-items: center;
+}
+
+
+/* =========================================
+   DOCTOR IMAGE
+========================================= */
+
+.sai-doctor-image {
+    width: 100%;
+    height: 520px;
+
+    overflow: hidden;
+
+    border-radius: 22px;
+
+    background: #ffffff;
+
+    box-shadow:
+        0 15px 40px rgba(0, 0, 0, 0.25);
+}
+
+
+.sai-doctor-image img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+    object-position: center;
+}
+
+
+/* =========================================
+   CONTENT
+========================================= */
+
+.sai-doctor-content {
+    color: #ffffff;
+}
+
+
+/* =========================================
+   SMALL TAG
+========================================= */
+
+.sai-doctor-tag {
+    display: inline-block;
+
+    padding: 8px 14px;
+
+    margin-bottom: 18px;
+
+    border-radius: 30px;
+
+    background: rgba(255, 255, 255, 0.10);
+
+    color: #f2b84b;
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    letter-spacing: 1px;
+
+    text-transform: uppercase;
+}
+
+
+/* =========================================
+   DOCTOR NAME
+========================================= */
+
+.sai-doctor-content h2 {
+    margin: 0 0 8px;
+
+    font-size: 38px;
+
+    font-weight: 700;
+
+    line-height: 1.2;
+
+    color: #ffffff;
+}
+
+
+/* =========================================
+   QUALIFICATION
+========================================= */
+
+.sai-doctor-qualification {
+    margin: 0;
+
+    font-size: 16px;
+
+    font-weight: 600;
+
+    color: #f2b84b;
+}
+
+
+/* =========================================
+   DESCRIPTION
+========================================= */
+
+.sai-doctor-description {
+    max-width: 750px;
+
+    margin-top: 25px;
+    margin-bottom: 30px;
+
+    font-size: 15px;
+
+    line-height: 1.8;
+
+    color: #c6d0da;
+}
+
+
+/* =========================================
+   INFORMATION GRID
+========================================= */
+
+.sai-doctor-info-grid {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 16px;
+}
+
+
+/* =========================================
+   INFORMATION CARD
+========================================= */
+
+.sai-doctor-info-card {
+    padding: 20px;
+
+    min-height: 90px;
+
+    box-sizing: border-box;
+
+    background: #1c354a;
+
+    border-radius: 12px;
+
+    border: 1px solid rgba(255, 255, 255, 0.05);
+
+    transition: 0.3s ease;
+}
+
+
+.sai-doctor-info-card:hover {
+    transform: translateY(-4px);
+
+    background: #244258;
+
+    box-shadow:
+        0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+
+/* =========================================
+   CARD TITLE
+========================================= */
+
+.sai-doctor-info-card h3 {
+    margin: 0 0 9px;
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    color: #ffffff;
+}
+
+
+/* =========================================
+   CARD DESCRIPTION
+========================================= */
+
+.sai-doctor-info-card p {
+    margin: 0;
+
+    font-size: 13px;
+
+    line-height: 1.6;
+
+    color: #b9c6d1;
+}
+
+
+/* =========================================
+   BUTTON AREA
+========================================= */
+
+.sai-doctor-button-area {
+    margin-top: 30px;
+}
+
+
+/* =========================================
+   APPOINTMENT BUTTON
+========================================= */
+
+.sai-doctor-button {
+    display: inline-block;
+
+    padding: 14px 28px;
+
+    background: #e53935;
+
+    color: #ffffff;
+
+    text-decoration: none;
+
+    border-radius: 8px;
+
+    font-size: 15px;
+
+    font-weight: 700;
+
+    transition: 0.3s ease;
+}
+
+
+.sai-doctor-button:hover {
+    background: #c62828;
+
+    color: #ffffff;
+
+    transform: translateY(-2px);
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 992px) {
+
+    .sai-doctor-container {
+        grid-template-columns: 320px 1fr;
+
+        gap: 45px;
+    }
+
+
+    .sai-doctor-image {
+        height: 450px;
+    }
+
+
+    .sai-doctor-content h2 {
+        font-size: 32px;
+    }
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 768px) {
+
+    .sai-doctor-section {
+        padding: 60px 20px;
+    }
+
+
+    .sai-doctor-container {
+        grid-template-columns: 1fr;
+
+        gap: 40px;
+    }
+
+
+    .sai-doctor-image {
+        max-width: 400px;
+
+        height: 500px;
+
+        margin: auto;
+    }
+
+
+    .sai-doctor-content {
+        text-align: center;
+    }
+
+
+    .sai-doctor-description {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+
+    .sai-doctor-info-grid {
+        grid-template-columns: 1fr;
+
+        text-align: left;
+    }
+
+}
+
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 480px) {
+
+    .sai-doctor-section {
+        padding: 50px 15px;
+    }
+
+
+    .sai-doctor-image {
+        height: 420px;
+
+        border-radius: 18px;
+    }
+
+
+    .sai-doctor-content h2 {
+        font-size: 28px;
+    }
+
+
+    .sai-doctor-qualification {
+        font-size: 14px;
+    }
+
+
+    .sai-doctor-description {
+        font-size: 14px;
+    }
+
+
+    .sai-doctor-info-card {
+        padding: 18px;
+    }
+
+
+    .sai-doctor-button {
+        width: 100%;
+
+        box-sizing: border-box;
+    }
+
+}
+</style>
+
+<style>
 	/* =====================================
    BEFORE & AFTER GALLERY SECTION
 ===================================== */
@@ -2023,7 +2495,7 @@
 										<div class="navigation-top">
 											<div class="wrap">
 												<nav id="site-navigation"
-													class="main-navigation pbmit-navbar  pbmit-main-active-color-secondarycolor pbmit-dropdown-active-color-secondarycolor"
+													class="main-navigation pbmit-navbar  pbmit-main-active-color-globalcolor pbmit-dropdown-active-color-globalcolor"
 													aria-label="Top Menu">
 													<div class="menu-main-menu-container">
 														<ul id="pbmit-top-menu" class="menu">
@@ -3048,7 +3520,145 @@
 										<!-- =========================
 											WHY CHOOSE US SECTION END
 										========================= -->
-																				
+
+										<!-- =========================================
+												SAI MANASA DENTAL CLINIC - DOCTOR SECTION
+											========================================= -->
+
+											<section class="sai-doctor-section">
+
+												<div class="sai-doctor-container">
+
+
+													<!-- Doctor Image -->
+
+													<div class="sai-doctor-image">
+
+														<img src="images/doc1.jpeg"
+															alt="Dr. V. Sai Manasa">
+
+													</div>
+
+
+													<!-- Doctor Content -->
+
+													<div class="sai-doctor-content">
+
+
+														<!-- Small Tag -->
+
+														<span class="sai-doctor-tag">
+															LEAD DENTIST
+														</span>
+
+
+														<!-- Doctor Name -->
+
+														<h2>Dr. V. Sai Manasa</h2>
+
+
+														<!-- Qualification -->
+
+														<p class="sai-doctor-qualification">
+
+															MDS, Pedodontics
+
+														</p>
+
+
+														<!-- Description -->
+
+														<p class="sai-doctor-description">
+
+															Dr. V. Sai Manasa is dedicated to providing compassionate,
+															personalized and high-quality dental care. With a patient-first
+															approach and modern dental techniques, she focuses on creating
+															healthy, confident and beautiful smiles for patients of all ages.
+
+														</p>
+
+
+														<!-- Information Cards -->
+
+														<div class="sai-doctor-info-grid">
+
+
+															<!-- Card 1 -->
+
+															<div class="sai-doctor-info-card">
+
+																<h3>Speciality</h3>
+
+																<p>
+																	Pedodontics and comprehensive dental care.
+																</p>
+
+															</div>
+
+
+															<!-- Card 2 -->
+
+															<div class="sai-doctor-info-card">
+
+																<h3>Patient Care</h3>
+
+																<p>
+																	Comfortable and personalized treatment for every patient.
+																</p>
+
+															</div>
+
+
+															<!-- Card 3 -->
+
+															<div class="sai-doctor-info-card">
+
+																<h3>Modern Dentistry</h3>
+
+																<p>
+																	Advanced techniques and modern dental treatments.
+																</p>
+
+															</div>
+
+
+															<!-- Card 4 -->
+
+															<div class="sai-doctor-info-card">
+
+																<h3>Our Approach</h3>
+
+																<p>
+																	Creating healthy, confident and beautiful smiles.
+																</p>
+
+															</div>
+
+
+														</div>
+
+
+														<!-- Button -->
+
+														<div class="sai-doctor-button-area">
+
+															<a href="appointmentbook.html"
+															class="sai-doctor-button">
+
+																Book an Appointment
+
+															</a>
+
+														</div>
+
+
+													</div>
+
+
+												</div>
+
+											</section>
+
 										<!-- =========================
 											FAQ SECTION START
 										========================= -->
@@ -4346,7 +4956,7 @@
 			top: 50%;
 			z-index: 9999;
 			padding: 18px 14px;
-			background: #c1a43e;
+			background: #d71920;
 			color: #fff;
 			font-weight: 700;
 			text-decoration: none;
