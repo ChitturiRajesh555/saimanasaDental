@@ -959,175 +959,709 @@
 }
 
 
-/* ==================================
-   WHY CHOOSE US
-================================== */
 
-.custom-why-section {
-    padding: 85px 0;
-    background: #f8f8f8;
+<!-- =========================
+     FAQ SECTION CSS
+========================= -->
+
+<style>
+
+.sm-faq-section {
+    padding: 80px 20px;
+    background: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
-.custom-why-heading {
+
+.sm-faq-container {
+    width: 100%;
+    max-width: 900px;
+    margin: auto;
+}
+
+
+/* Heading */
+
+.sm-faq-heading {
     text-align: center;
-    max-width: 700px;
-    margin: 0 auto 45px;
+    margin-bottom: 45px;
 }
 
-.custom-why-heading .sub-title {
-	    color: #c1a43e;
-    font-weight: 600;
-    font-size: 15px;
-}
 
-.custom-why-heading h2 {
-    font-size: 40px;
-    font-weight: 700;
-    margin: 8px 0 0;
-    color: #222;
-}
-
-.custom-why-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 55px;
-    align-items: center;
-}
-
-.custom-why-left h3 {
-    font-size: 34px;
-    line-height: 1.25;
-    font-weight: 700;
-    color: #222;
-    margin: 0 0 18px;
-}
-
-.custom-why-left > p {
-    color: #777;
-    line-height: 1.8;
-    margin-bottom: 25px;
-}
-
-.custom-why-list {
-    list-style: none;
-    padding: 0;
-    margin: 0 0 30px;
-}
-
-.custom-why-list li {
-    display: flex;
-    align-items: flex-start;
-    gap: 12px;
-    margin-bottom: 15px;
-    color: #444;
-    line-height: 1.6;
-}
-
-.custom-check {
-    width: 26px;
-    height: 26px;
-    min-width: 26px;
-    border-radius: 50%;
-	    background: #c1a43e;
-    color: #fff;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 13px;
-    font-weight: 700;
-}
-
-.custom-why-button {
+.sm-faq-eyebrow {
     display: inline-block;
-	    background: #c1a43e;
-    color: #fff !important;
-    padding: 14px 28px;
-    border-radius: 30px;
-    text-decoration: none !important;
-    font-weight: 600;
+
+    font-size: 14px;
+    font-weight: 700;
+
+    letter-spacing: 2px;
+    text-transform: uppercase;
+
+    color: #f28c28;
+
+    margin-bottom: 12px;
+}
+
+
+.sm-faq-heading h2 {
+    margin: 0;
+
+    font-size: 38px;
+    font-weight: 700;
+
+    line-height: 1.3;
+
+    color: #222222;
+}
+
+
+.sm-faq-heading p {
+    max-width: 650px;
+
+    margin: 15px auto 0;
+
+    font-size: 16px;
+    line-height: 1.7;
+
+    color: #666666;
+}
+
+
+/* FAQ List */
+
+.sm-faq-list {
+    display: flex;
+    flex-direction: column;
+
+    gap: 15px;
+}
+
+
+/* FAQ Card */
+
+.sm-faq-card {
+    background: #ffffff;
+
+    border: 1px solid #eeeeee;
+    border-radius: 10px;
+
+    padding: 0 22px;
+
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.06);
+
     transition: 0.3s;
 }
 
-.custom-why-button:hover {
-	    background: #a88d31;
+
+.sm-faq-card:hover {
+    border-color: #f28c28;
+
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.09);
 }
 
 
-/* Right side small cards */
-.custom-why-cards {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
+/* Question */
+
+.sm-faq-card summary {
+
+    min-height: 72px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
     gap: 20px;
+
+    cursor: pointer;
+
+    list-style: none;
+
+    font-size: 17px;
+
+    font-weight: 600;
+
+    line-height: 1.5;
+
+    color: #222222;
 }
 
-.custom-why-card {
-    background: #fff;
-    border-radius: 14px;
-    padding: 28px 24px;
-    border: 1px solid #ececec;
-    min-height: 170px;
-    box-shadow: 0 8px 25px rgba(0,0,0,0.04);
+
+/* Remove default arrow */
+
+.sm-faq-card summary::-webkit-details-marker {
+    display: none;
 }
 
-.custom-why-card h4 {
-    margin: 0 0 12px;
-	    color: #c1a43e;
+
+.sm-faq-card summary::marker {
+    display: none;
+}
+
+
+/* Plus Icon */
+
+.faq-icon {
+
+    width: 34px;
+    height: 34px;
+
+    min-width: 34px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #fff5eb;
+
+    color: #f28c28;
+
     font-size: 24px;
-    font-weight: 700;
+
+    font-weight: 400;
+
+    transition: 0.3s;
 }
 
-.custom-why-card p {
+
+/* Open FAQ */
+
+.sm-faq-card[open] {
+
+    border-color: #f28c28;
+}
+
+
+.sm-faq-card[open] summary {
+
+    color: #f28c28;
+}
+
+
+.sm-faq-card[open] .faq-icon {
+
+    transform: rotate(45deg);
+
+    background: #f28c28;
+
+    color: #ffffff;
+}
+
+
+/* Answer */
+
+.sm-faq-card p {
+
     margin: 0;
-    font-size: 14px;
-    line-height: 1.7;
-    color: #777;
+
+    padding: 0 50px 22px 0;
+
+    font-size: 15px;
+
+    line-height: 1.8;
+
+    color: #666666;
 }
 
 
-/* Tablet */
-@media (max-width: 991px) {
+/* Button */
 
-    .custom-services-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
+.sm-faq-bottom {
 
-    .custom-why-grid {
-        grid-template-columns: 1fr;
-    }
+    text-align: center;
+
+    margin-top: 40px;
 }
 
 
-/* Mobile */
-@media (max-width: 600px) {
+.sm-faq-button {
 
-    .custom-services-section,
-    .custom-why-section {
-        padding: 55px 0;
+    display: inline-block;
+
+    padding: 14px 30px;
+
+    background: #f28c28;
+
+    color: #ffffff;
+
+    border-radius: 6px;
+
+    text-decoration: none;
+
+    font-size: 15px;
+
+    font-weight: 600;
+
+    transition: 0.3s;
+}
+
+
+.sm-faq-button:hover {
+
+    background: #dc7618;
+
+    color: #ffffff;
+
+    transform: translateY(-2px);
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 768px) {
+
+    .sm-faq-section {
+
+        padding: 60px 18px;
     }
 
-    .custom-services-grid {
-        grid-template-columns: 1fr;
-    }
 
-    .custom-service-image {
-        height: 210px;
-    }
+    .sm-faq-heading h2 {
 
-    .custom-section-heading h2,
-    .custom-why-heading h2 {
         font-size: 30px;
     }
 
-    .custom-why-left h3 {
-        font-size: 27px;
+
+    .sm-faq-card {
+
+        padding: 0 18px;
     }
 
-    .custom-why-cards {
-        grid-template-columns: 1fr;
+
+    .sm-faq-card summary {
+
+        font-size: 16px;
     }
+
+
+    .sm-faq-card p {
+
+        padding-right: 0;
+    }
+
 }
-.pbmit-navbar > div > ul > li:hover > a{
-	color: #c1a43e !important;
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 480px) {
+
+    .sm-faq-section {
+
+        padding: 50px 15px;
+    }
+
+
+    .sm-faq-heading {
+
+        margin-bottom: 30px;
+    }
+
+
+    .sm-faq-heading h2 {
+
+        font-size: 26px;
+    }
+
+
+    .sm-faq-heading p {
+
+        font-size: 14px;
+    }
+
+
+    .sm-faq-card {
+
+        padding: 0 15px;
+
+        border-radius: 8px;
+    }
+
+
+    .sm-faq-card summary {
+
+        min-height: 64px;
+
+        font-size: 15px;
+
+        gap: 12px;
+    }
+
+
+    .faq-icon {
+
+        width: 30px;
+        height: 30px;
+
+        min-width: 30px;
+
+        font-size: 21px;
+    }
+
+
+    .sm-faq-card p {
+
+        font-size: 14px;
+
+        padding-bottom: 18px;
+    }
+
+
+    .sm-faq-button {
+
+        width: 100%;
+
+        box-sizing: border-box;
+    }
+
+}
+
+</style>
+
+<!-- =========================
+     WHY CHOOSE US SECTION CSS
+========================= -->
+
+<style>
+
+.sm-why-section {
+
+    padding: 80px 20px;
+
+    background: #f8f8f8;
+
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+.sm-why-container {
+
+    width: 100%;
+
+    max-width: 1200px;
+
+    margin: auto;
+}
+
+
+/* =========================
+   SECTION HEADING
+========================= */
+
+.sm-why-heading {
+
+    text-align: center;
+
+    max-width: 750px;
+
+    margin: 0 auto 50px;
+}
+
+
+.sm-why-eyebrow {
+
+    display: inline-block;
+
+    margin-bottom: 12px;
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+    text-transform: uppercase;
+
+    color: #f28c28;
+}
+
+
+.sm-why-heading h2 {
+
+    margin: 0;
+
+    font-size: 38px;
+
+    font-weight: 700;
+
+    line-height: 1.3;
+
+    color: #222222;
+}
+
+
+.sm-why-heading p {
+
+    margin: 15px auto 0;
+
+    font-size: 16px;
+
+    line-height: 1.8;
+
+    color: #666666;
+}
+
+
+/* =========================
+   CARDS GRID
+========================= */
+
+.sm-why-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+
+/* =========================
+   CARD
+========================= */
+
+.sm-why-card {
+
+    background: #ffffff;
+
+    padding: 35px 28px;
+
+    border-radius: 10px;
+
+    border: 1px solid #eeeeee;
+
+    text-align: center;
+
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.06);
+
+    transition: 0.3s;
+}
+
+
+.sm-why-card:hover {
+
+    transform: translateY(-6px);
+
+    border-color: #f28c28;
+
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.10);
+}
+
+
+/* =========================
+   ICON
+========================= */
+
+.sm-why-icon {
+
+    width: 70px;
+
+    height: 70px;
+
+    margin: 0 auto 20px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #fff5eb;
+
+    font-size: 32px;
+}
+
+
+/* =========================
+   CARD TITLE
+========================= */
+
+.sm-why-card h3 {
+
+    margin: 0 0 12px;
+
+    font-size: 20px;
+
+    font-weight: 700;
+
+    color: #222222;
+}
+
+
+/* =========================
+   CARD TEXT
+========================= */
+
+.sm-why-card p {
+
+    margin: 0;
+
+    font-size: 15px;
+
+    line-height: 1.8;
+
+    color: #666666;
+}
+
+
+/* =========================
+   BUTTON
+========================= */
+
+.sm-why-bottom {
+
+    text-align: center;
+
+    margin-top: 45px;
+}
+
+
+.sm-why-button {
+
+    display: inline-block;
+
+    padding: 14px 32px;
+
+    background: #f28c28;
+
+    color: #ffffff;
+
+    border-radius: 6px;
+
+    text-decoration: none;
+
+    font-size: 15px;
+
+    font-weight: 600;
+
+    transition: 0.3s;
+}
+
+
+.sm-why-button:hover {
+
+    background: #dc7618;
+
+    color: #ffffff;
+
+    transform: translateY(-2px);
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 992px) {
+
+    .sm-why-grid {
+
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 768px) {
+
+    .sm-why-section {
+
+        padding: 60px 18px;
+    }
+
+
+    .sm-why-heading h2 {
+
+        font-size: 30px;
+    }
+
+
+    .sm-why-grid {
+
+        grid-template-columns: 1fr;
+
+        gap: 20px;
+    }
+
+
+    .sm-why-card {
+
+        padding: 30px 22px;
+    }
+
+}
+
+
+/* =========================
+   SMALL MOBILE
+========================= */
+
+@media (max-width: 480px) {
+
+    .sm-why-section {
+
+        padding: 50px 15px;
+    }
+
+
+    .sm-why-heading {
+
+        margin-bottom: 35px;
+    }
+
+
+    .sm-why-eyebrow {
+
+        font-size: 12px;
+    }
+
+
+    .sm-why-heading h2 {
+
+        font-size: 26px;
+    }
+
+
+    .sm-why-heading p {
+
+        font-size: 14px;
+    }
+
+
+    .sm-why-card h3 {
+
+        font-size: 18px;
+    }
+
+
+    .sm-why-card p {
+
+        font-size: 14px;
+    }
+
+
+    .sm-why-button {
+
+        width: 100%;
+
+        box-sizing: border-box;
+    }
+
 }
 
 </style>
@@ -1177,7 +1711,7 @@
 														<ul id="pbmit-top-menu" class="menu">
 															<li id="menu-item-985"
 																class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-75 current_page_item menu-item-985">
-																<a href="index.html" aria-current="page">Home</a>
+																<a href="" aria-current="page">Home</a>
 															</li>
 															<li id="menu-item-986"
 																class="menu-item menu-item-type-post_type menu-item-object-page menu-item-986">
@@ -1220,7 +1754,7 @@
 															
 															<li id="menu-item-986"
 																class="menu-item menu-item-type-post_type menu-item-object-page menu-item-990">
-																<a href="">Blog</a>
+																<a href="blog.html">Blog</a>
 															</li>
 															<li id="menu-item-988"
 																class="menu-item menu-item-type-post_type menu-item-object-page menu-item-990">
@@ -2036,7 +2570,7 @@
 													</a>
 												</div>
 												<div class="mt-12 text-center">
-													<a href="facilities.html" class=" btn btn-accent">
+													<a href="services.html" class=" btn btn-accent">
 														View all Services </a>
 												</div>
 											</div>
@@ -2044,30 +2578,393 @@
 										<br>
 
 										
-										<!-- <section id="why" class="bg-brand-50/60 py-20">
-											<div class="container-wrap grid items-center gap-12 lg:grid-cols-2">
-												<div>
-												<span class="eyebrow">Why Choose Us</span>
-												<h2 class="mt-4 text-3xl font-bold sm:text-4xl">Care That Puts Your Comfort &amp; Safety First</h2>
-												<p class="mt-4 text-ink-500">Choosing the <a href="best-dentist-in-hyderabad/index.html" class="font-semibold text-brand-700 hover:text-brand-800">best dentist in Hyderabad</a> matters. Here is why thousands of patients trust us with their smiles — including those seeking <a href="dental-implants-in-hyderabad/index.html" class="font-semibold text-brand-700 hover:text-brand-800">dental implants in Hyderabad</a>.</p>
-												<ul class="mt-6 space-y-4">
-													<li class="flex items-start gap-3"><span class="mt-0.5 grid h-6 w-6 shrink-0 place-items-center rounded-full bg-brand-600 text-xs text-white">✓</span><span class="text-ink-700">Over two decades of experience, established in 2004</span></li>
-													<li class="flex items-start gap-3"><span class="mt-0.5 grid h-6 w-6 shrink-0 place-items-center rounded-full bg-brand-600 text-xs text-white">✓</span><span class="text-ink-700">Led by Dr. B. Vijay Reddy, MDS, NBDE (USA) — Maxillofacial Surgeon &amp; Implantologist</span></li>
-													<li class="flex items-start gap-3"><span class="mt-0.5 grid h-6 w-6 shrink-0 place-items-center rounded-full bg-brand-600 text-xs text-white">✓</span><span class="text-ink-700">Experienced specialists across implants, cosmetic, ortho, endo &amp; pediatric dentistry</span></li>
-													<li class="flex items-start gap-3"><span class="mt-0.5 grid h-6 w-6 shrink-0 place-items-center rounded-full bg-brand-600 text-xs text-white">✓</span><span class="text-ink-700">Strict sterilisation &amp; international infection-control protocols</span></li>
-													<li class="flex items-start gap-3"><span class="mt-0.5 grid h-6 w-6 shrink-0 place-items-center rounded-full bg-brand-600 text-xs text-white">✓</span><span class="text-ink-700">Transparent, ethical treatment plans with affordable pricing &amp; EMI options</span></li>
-													<li class="flex items-start gap-3"><span class="mt-0.5 grid h-6 w-6 shrink-0 place-items-center rounded-full bg-brand-600 text-xs text-white">✓</span><span class="text-ink-700">Conveniently located in Himayatnagar, easily reached from Narayanguda, Basheerbagh, Abids, Koti, Chikkadpally &amp; RTC X Roads</span></li>
-												</ul>
-												<a href="index.html" class="btn-primary mt-8">Schedule a Visit</a>
-												</div>
-												<div class="grid gap-6 sm:grid-cols-2">
-												<div class="card"><p class="text-2xl font-bold text-brand-600">Painless</p><p class="mt-2 text-sm text-ink-500">Gentle, minimally invasive techniques with modern anaesthesia.</p></div>
-												<div class="card"><p class="text-2xl font-bold text-brand-600">Sterile</p><p class="mt-2 text-sm text-ink-500">Class-B autoclaves and individually packed sterile instrument kits.</p></div>
-												<div class="card"><p class="text-2xl font-bold text-brand-600">Advanced</p><p class="mt-2 text-sm text-ink-500">Digital X-ray, RVG, CBCT-guided implant planning &amp; microscopes.</p></div>
-												<div class="card"><p class="text-2xl font-bold text-brand-600">Family</p><p class="mt-2 text-sm text-ink-500">Comprehensive care for children and adults under one roof.</p></div>
-												</div>
-											</div>
-										</section>-->
+										<!-- =========================
+     WHY CHOOSE US SECTION START
+========================= -->
+
+<section id="why-choose-us" class="sm-why-section">
+
+    <div class="sm-why-container">
+
+        <!-- Section Heading -->
+        <div class="sm-why-heading">
+
+            <span class="sm-why-eyebrow">WHY CHOOSE US</span>
+
+            <h2>Your Smile Deserves the Best Care</h2>
+
+            <p>
+                At Sai Manasa Dental Clinic, we are committed to providing
+                quality, comfortable and personalized dental care for patients
+                of all ages.
+            </p>
+
+        </div>
+
+
+        <!-- Why Choose Us Cards -->
+        <div class="sm-why-grid">
+
+
+            <!-- Card 1 -->
+            <div class="sm-why-card">
+
+                <div class="sm-why-icon">
+                    🦷
+                </div>
+
+                <h3>Comprehensive Dental Care</h3>
+
+                <p>
+                    From routine dental care to advanced treatments, we provide
+                    a wide range of dental services under one roof.
+                </p>
+
+            </div>
+
+
+            <!-- Card 2 -->
+            <div class="sm-why-card">
+
+                <div class="sm-why-icon">
+                    👨‍⚕️
+                </div>
+
+                <h3>Experienced Dental Care</h3>
+
+                <p>
+                    Our clinic is committed to providing professional dental
+                    treatment with care, attention and a patient-focused approach.
+                </p>
+
+            </div>
+
+
+            <!-- Card 3 -->
+            <div class="sm-why-card">
+
+                <div class="sm-why-icon">
+                    😊
+                </div>
+
+                <h3>Comfortable Treatment</h3>
+
+                <p>
+                    We focus on making every dental visit comfortable and
+                    helping patients feel relaxed throughout their treatment.
+                </p>
+
+            </div>
+
+
+            <!-- Card 4 -->
+            <div class="sm-why-card">
+
+                <div class="sm-why-icon">
+                    🦷
+                </div>
+
+                <h3>Advanced Dental Solutions</h3>
+
+                <p>
+                    We provide modern dental treatment options designed to
+                    improve oral health, function and the appearance of your smile.
+                </p>
+
+            </div>
+
+
+            <!-- Card 5 -->
+            <div class="sm-why-card">
+
+                <div class="sm-why-icon">
+                    👨‍👩‍👧‍👦
+                </div>
+
+                <h3>Care for the Whole Family</h3>
+
+                <p>
+                    From children's dentistry to adult dental treatments,
+                    we provide dental care for patients of different age groups.
+                </p>
+
+            </div>
+
+
+            <!-- Card 6 -->
+            <div class="sm-why-card">
+
+                <div class="sm-why-icon">
+                    ❤️
+                </div>
+
+                <h3>Personalized Care</h3>
+
+                <p>
+                    Every patient is different. We provide personalized dental
+                    care based on individual needs and treatment requirements.
+                </p>
+
+            </div>
+
+
+        </div>
+
+
+        <!-- Bottom Button -->
+        <div class="sm-why-bottom">
+
+            <a href="appointmentbook.html" class="sm-why-button">
+                Book an Appointment
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+
+<!-- =========================
+     WHY CHOOSE US SECTION END
+========================= -->
+										
+<!-- =========================
+     FAQ SECTION START
+========================= -->
+
+<section id="faq" class="sm-faq-section">
+
+    <div class="sm-faq-container">
+
+        <!-- Section Heading -->
+        <div class="sm-faq-heading">
+
+            <span class="sm-faq-eyebrow">FAQ</span>
+
+            <h2>Frequently Asked Questions</h2>
+
+            <p>
+                Find answers to common questions about dental treatments
+                and services at Sai Manasa Dental Clinic.
+            </p>
+
+        </div>
+
+
+        <!-- FAQ List -->
+        <div class="sm-faq-list">
+
+
+            <!-- FAQ 1 -->
+            <details class="sm-faq-card" open>
+
+                <summary>
+                    Where is Sai Manasa Dental Clinic located?
+
+                    <span class="faq-icon">+</span>
+                </summary>
+
+                <p>
+                    Sai Manasa Dental Clinic is located at
+                    6-2-250, Jaya Hospital Lane, Opp. Zubair Bookstall,
+                    Chowrasta, Kakaji Nagar Colony, Hanamkonda,
+                    Telangana - 506001.
+                </p>
+
+            </details>
+
+
+            <!-- FAQ 2 -->
+            <details class="sm-faq-card">
+
+                <summary>
+                    What dental services do you provide?
+
+                    <span class="faq-icon">+</span>
+                </summary>
+
+                <p>
+                    We provide comprehensive dental care including children's
+                    dentistry, dental implants, orthodontic treatment,
+                    root canal treatment, crowns and bridges, oral and
+                    maxillofacial surgery, laser dentistry and dentures.
+                </p>
+
+            </details>
+
+
+            <!-- FAQ 3 -->
+            <details class="sm-faq-card">
+
+                <summary>
+                    Do you provide dental implant treatment?
+
+                    <span class="faq-icon">+</span>
+                </summary>
+
+                <p>
+                    Yes. We provide dental implant treatment for replacing
+                    missing teeth. Dental implants are designed to provide
+                    a strong, functional and natural-looking replacement
+                    for missing teeth.
+                </p>
+
+            </details>
+
+
+            <!-- FAQ 4 -->
+            <details class="sm-faq-card">
+
+                <summary>
+                    Do you provide dental treatment for children?
+
+                    <span class="faq-icon">+</span>
+                </summary>
+
+                <p>
+                    Yes. We provide gentle and professional dental care for
+                    children, including preventive dental care, cavity
+                    treatment and guidance for maintaining healthy teeth
+                    and gums.
+                </p>
+
+            </details>
+
+
+            <!-- FAQ 5 -->
+            <details class="sm-faq-card">
+
+                <summary>
+                    Do you provide braces and orthodontic treatment?
+
+                    <span class="faq-icon">+</span>
+                </summary>
+
+                <p>
+                    Yes. Our orthodontic treatments help diagnose and correct
+                    dental and facial irregularities. Treatment options may
+                    include braces and other orthodontic solutions depending
+                    on the patient's dental condition.
+                </p>
+
+            </details>
+
+
+            <!-- FAQ 6 -->
+            <details class="sm-faq-card">
+
+                <summary>
+                    Is root canal treatment available?
+
+                    <span class="faq-icon">+</span>
+                </summary>
+
+                <p>
+                    Yes. Root canal treatment is available for teeth affected
+                    by infection or damage to the dental pulp. The treatment
+                    helps preserve the natural tooth and relieve discomfort.
+                </p>
+
+            </details>
+
+
+            <!-- FAQ 7 -->
+            <details class="sm-faq-card">
+
+                <summary>
+                    Do you provide crowns and bridges?
+
+                    <span class="faq-icon">+</span>
+                </summary>
+
+                <p>
+                    Yes. Dental crowns are used to restore the shape,
+                    appearance and strength of damaged teeth, while dental
+                    bridges can be used to replace one or more missing teeth.
+                </p>
+
+            </details>
+
+
+            <!-- FAQ 8 -->
+            <details class="sm-faq-card">
+
+                <summary>
+                    Do you provide dentures?
+
+                    <span class="faq-icon">+</span>
+                </summary>
+
+                <p>
+                    Yes. We provide denture solutions to help replace missing
+                    teeth and restore your ability to smile, speak and eat
+                    comfortably.
+                </p>
+
+            </details>
+
+
+            <!-- FAQ 9 -->
+            <details class="sm-faq-card">
+
+                <summary>
+                    Do you provide oral surgery and laser dentistry?
+
+                    <span class="faq-icon">+</span>
+                </summary>
+
+                <p>
+                    Yes. Sai Manasa Dental Clinic provides oral and
+                    maxillofacial surgical treatment along with modern
+                    laser dentistry for selected dental and gum procedures.
+                </p>
+
+            </details>
+
+
+            <!-- FAQ 10 -->
+            <details class="sm-faq-card">
+
+                <summary>
+                    How can I book an appointment?
+
+                    <span class="faq-icon">+</span>
+                </summary>
+
+                <p>
+                    You can book an appointment by contacting Sai Manasa
+                    Dental Clinic at +91 6281677760 or by using the
+                    appointment option available on our website.
+                </p>
+
+            </details>
+
+
+        </div>
+
+
+        <!-- Appointment Button -->
+        <div class="sm-faq-bottom">
+
+            <a href="contact.html" class="sm-faq-button">
+                Book an Appointment
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+
+<!-- =========================
+     FAQ SECTION END
+========================= -->
 
 										<div class="elementor-element elementor-element-86c7d17 pbmit-bg-color-yes pbmit-elementor-bg-color-light e-con-full pbmit-bg-color-over-image e-flex e-con e-parent"
 											data-id="86c7d17" data-element_type="container" data-e-type="container"
