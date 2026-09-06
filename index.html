@@ -1666,6 +1666,324 @@
 
 </style>
 
+<style>
+	/* =====================================
+   BEFORE & AFTER GALLERY SECTION
+===================================== */
+
+.sm-gallery-section {
+    padding: 80px 20px;
+    background: #f7f8fa;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/* Container */
+
+.sm-gallery-container {
+    width: 100%;
+    max-width: 1250px;
+    margin: auto;
+}
+
+
+/* =====================================
+   Section Heading
+===================================== */
+
+.sm-gallery-heading {
+    max-width: 750px;
+    margin: 0 auto 50px;
+    text-align: center;
+}
+
+
+.sm-gallery-eyebrow {
+    display: inline-block;
+    margin-bottom: 12px;
+
+    font-size: 14px;
+    font-weight: 700;
+
+    letter-spacing: 2px;
+    text-transform: uppercase;
+
+    color: #f28c28;
+}
+
+
+.sm-gallery-heading h2 {
+    margin: 0;
+
+    font-size: 38px;
+    font-weight: 700;
+
+    line-height: 1.3;
+
+    color: #222222;
+}
+
+
+.sm-gallery-heading p {
+    margin: 15px auto 0;
+
+    font-size: 16px;
+    line-height: 1.8;
+
+    color: #666666;
+}
+
+
+/* =====================================
+   Gallery Grid
+===================================== */
+
+.sm-gallery-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 28px;
+}
+
+
+/* =====================================
+   Gallery Card
+===================================== */
+
+.sm-gallery-card {
+    background: #ffffff;
+
+    border: 1px solid #e8e8e8;
+
+    border-radius: 12px;
+
+    overflow: hidden;
+
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+
+    transition: 0.3s ease;
+}
+
+
+.sm-gallery-card:hover {
+    transform: translateY(-7px);
+
+    border-color: #f28c28;
+
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.13);
+}
+
+
+/* =====================================
+   Image
+===================================== */
+
+.sm-gallery-image {
+    width: 100%;
+    overflow: hidden;
+    background: #eeeeee;
+}
+
+
+.sm-gallery-image img {
+    display: block;
+
+    width: 100%;
+    height: auto;
+
+    transition: transform 0.4s ease;
+}
+
+
+.sm-gallery-card:hover .sm-gallery-image img {
+    transform: scale(1.03);
+}
+
+
+/* =====================================
+   Card Content
+===================================== */
+
+.sm-gallery-content {
+    padding: 22px 20px;
+    text-align: center;
+}
+
+
+.sm-gallery-content h3 {
+    margin: 0 0 10px;
+
+    font-size: 20px;
+    font-weight: 700;
+
+    color: #222222;
+}
+
+
+.sm-gallery-content p {
+    margin: 0;
+
+    font-size: 14px;
+    line-height: 1.7;
+
+    color: #666666;
+}
+
+
+/* =====================================
+   Bottom Section
+===================================== */
+
+.sm-gallery-bottom {
+    max-width: 750px;
+
+    margin: 50px auto 0;
+
+    text-align: center;
+}
+
+
+.sm-gallery-bottom p {
+    margin: 0 auto 25px;
+
+    font-size: 14px;
+    line-height: 1.7;
+
+    color: #777777;
+}
+
+
+/* =====================================
+   Button
+===================================== */
+
+.sm-gallery-button {
+    display: inline-block;
+
+    padding: 14px 32px;
+
+    background: #f28c28;
+
+    color: #ffffff;
+
+    border-radius: 6px;
+
+    text-decoration: none;
+
+    font-size: 15px;
+    font-weight: 600;
+
+    transition: 0.3s ease;
+}
+
+
+.sm-gallery-button:hover {
+    background: #dc7618;
+
+    color: #ffffff;
+
+    transform: translateY(-2px);
+}
+
+
+/* =====================================
+   Tablet
+===================================== */
+
+@media (max-width: 992px) {
+
+    .sm-gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+/* =====================================
+   Mobile
+===================================== */
+
+@media (max-width: 768px) {
+
+    .sm-gallery-section {
+        padding: 60px 18px;
+    }
+
+
+    .sm-gallery-heading {
+        margin-bottom: 35px;
+    }
+
+
+    .sm-gallery-heading h2 {
+        font-size: 30px;
+    }
+
+
+    .sm-gallery-grid {
+        grid-template-columns: 1fr;
+
+        gap: 22px;
+
+        max-width: 500px;
+
+        margin: auto;
+    }
+
+}
+
+
+/* =====================================
+   Small Mobile
+===================================== */
+
+@media (max-width: 480px) {
+
+    .sm-gallery-section {
+        padding: 50px 15px;
+    }
+
+
+    .sm-gallery-eyebrow {
+        font-size: 12px;
+    }
+
+
+    .sm-gallery-heading h2 {
+        font-size: 26px;
+    }
+
+
+    .sm-gallery-heading p {
+        font-size: 14px;
+    }
+
+
+    .sm-gallery-content {
+        padding: 18px 15px;
+    }
+
+
+    .sm-gallery-content h3 {
+        font-size: 18px;
+    }
+
+
+    .sm-gallery-content p {
+        font-size: 13px;
+    }
+
+
+    .sm-gallery-button {
+        width: 100%;
+
+        box-sizing: border-box;
+    }
+
+}
+</style>
+
 </head>
 
 <body
@@ -2579,392 +2897,540 @@
 
 										
 										<!-- =========================
-     WHY CHOOSE US SECTION START
-========================= -->
+											WHY CHOOSE US SECTION START
+										========================= -->
 
-<section id="why-choose-us" class="sm-why-section">
+										<section id="why-choose-us" class="sm-why-section">
 
-    <div class="sm-why-container">
+											<div class="sm-why-container">
 
-        <!-- Section Heading -->
-        <div class="sm-why-heading">
+												<!-- Section Heading -->
+												<div class="sm-why-heading">
 
-            <span class="sm-why-eyebrow">WHY CHOOSE US</span>
+													<span class="sm-why-eyebrow">WHY CHOOSE US</span>
 
-            <h2>Your Smile Deserves the Best Care</h2>
+													<h2>Your Smile Deserves the Best Care</h2>
 
-            <p>
-                At Sai Manasa Dental Clinic, we are committed to providing
-                quality, comfortable and personalized dental care for patients
-                of all ages.
-            </p>
+													<p>
+														At Sai Manasa Dental Clinic, we are committed to providing
+														quality, comfortable and personalized dental care for patients
+														of all ages.
+													</p>
 
-        </div>
+												</div>
 
 
-        <!-- Why Choose Us Cards -->
-        <div class="sm-why-grid">
+												<!-- Why Choose Us Cards -->
+												<div class="sm-why-grid">
 
 
-            <!-- Card 1 -->
-            <div class="sm-why-card">
+													<!-- Card 1 -->
+													<div class="sm-why-card">
 
-                <div class="sm-why-icon">
-                    🦷
-                </div>
+														<div class="sm-why-icon">
+															🦷
+														</div>
 
-                <h3>Comprehensive Dental Care</h3>
+														<h3>Comprehensive Dental Care</h3>
 
-                <p>
-                    From routine dental care to advanced treatments, we provide
-                    a wide range of dental services under one roof.
-                </p>
+														<p>
+															From routine dental care to advanced treatments, we provide
+															a wide range of dental services under one roof.
+														</p>
 
-            </div>
+													</div>
 
 
-            <!-- Card 2 -->
-            <div class="sm-why-card">
+													<!-- Card 2 -->
+													<div class="sm-why-card">
 
-                <div class="sm-why-icon">
-                    👨‍⚕️
-                </div>
+														<div class="sm-why-icon">
+															👨‍⚕️
+														</div>
 
-                <h3>Experienced Dental Care</h3>
+														<h3>Experienced Dental Care</h3>
 
-                <p>
-                    Our clinic is committed to providing professional dental
-                    treatment with care, attention and a patient-focused approach.
-                </p>
+														<p>
+															Our clinic is committed to providing professional dental
+															treatment with care, attention and a patient-focused approach.
+														</p>
 
-            </div>
+													</div>
 
 
-            <!-- Card 3 -->
-            <div class="sm-why-card">
+													<!-- Card 3 -->
+													<div class="sm-why-card">
 
-                <div class="sm-why-icon">
-                    😊
-                </div>
+														<div class="sm-why-icon">
+															😊
+														</div>
 
-                <h3>Comfortable Treatment</h3>
+														<h3>Comfortable Treatment</h3>
 
-                <p>
-                    We focus on making every dental visit comfortable and
-                    helping patients feel relaxed throughout their treatment.
-                </p>
+														<p>
+															We focus on making every dental visit comfortable and
+															helping patients feel relaxed throughout their treatment.
+														</p>
 
-            </div>
+													</div>
 
 
-            <!-- Card 4 -->
-            <div class="sm-why-card">
+													<!-- Card 4 -->
+													<div class="sm-why-card">
 
-                <div class="sm-why-icon">
-                    🦷
-                </div>
+														<div class="sm-why-icon">
+															🦷
+														</div>
 
-                <h3>Advanced Dental Solutions</h3>
+														<h3>Advanced Dental Solutions</h3>
 
-                <p>
-                    We provide modern dental treatment options designed to
-                    improve oral health, function and the appearance of your smile.
-                </p>
+														<p>
+															We provide modern dental treatment options designed to
+															improve oral health, function and the appearance of your smile.
+														</p>
 
-            </div>
+													</div>
 
 
-            <!-- Card 5 -->
-            <div class="sm-why-card">
+													<!-- Card 5 -->
+													<div class="sm-why-card">
 
-                <div class="sm-why-icon">
-                    👨‍👩‍👧‍👦
-                </div>
+														<div class="sm-why-icon">
+															👨‍👩‍👧‍👦
+														</div>
 
-                <h3>Care for the Whole Family</h3>
+														<h3>Care for the Whole Family</h3>
 
-                <p>
-                    From children's dentistry to adult dental treatments,
-                    we provide dental care for patients of different age groups.
-                </p>
+														<p>
+															From children's dentistry to adult dental treatments,
+															we provide dental care for patients of different age groups.
+														</p>
 
-            </div>
+													</div>
 
 
-            <!-- Card 6 -->
-            <div class="sm-why-card">
+													<!-- Card 6 -->
+													<div class="sm-why-card">
 
-                <div class="sm-why-icon">
-                    ❤️
-                </div>
+														<div class="sm-why-icon">
+															❤️
+														</div>
 
-                <h3>Personalized Care</h3>
+														<h3>Personalized Care</h3>
 
-                <p>
-                    Every patient is different. We provide personalized dental
-                    care based on individual needs and treatment requirements.
-                </p>
+														<p>
+															Every patient is different. We provide personalized dental
+															care based on individual needs and treatment requirements.
+														</p>
 
-            </div>
+													</div>
 
 
-        </div>
+												</div>
 
 
-        <!-- Bottom Button -->
-        <div class="sm-why-bottom">
+												<!-- Bottom Button -->
+												<div class="sm-why-bottom">
 
-            <a href="appointmentbook.html" class="sm-why-button">
-                Book an Appointment
-            </a>
+													<a href="appointmentbook.html" class="sm-why-button">
+														Book an Appointment
+													</a>
 
-        </div>
+												</div>
 
-    </div>
+											</div>
 
-</section>
+										</section>
 
 
 
 
-<!-- =========================
-     WHY CHOOSE US SECTION END
-========================= -->
-										
-<!-- =========================
-     FAQ SECTION START
-========================= -->
+										<!-- =========================
+											WHY CHOOSE US SECTION END
+										========================= -->
+																				
+										<!-- =========================
+											FAQ SECTION START
+										========================= -->
 
-<section id="faq" class="sm-faq-section">
+										<section id="faq" class="sm-faq-section">
 
-    <div class="sm-faq-container">
+											<div class="sm-faq-container">
 
-        <!-- Section Heading -->
-        <div class="sm-faq-heading">
+												<!-- Section Heading -->
+												<div class="sm-faq-heading">
 
-            <span class="sm-faq-eyebrow">FAQ</span>
+													<span class="sm-faq-eyebrow">FAQ</span>
 
-            <h2>Frequently Asked Questions</h2>
+													<h2>Frequently Asked Questions</h2>
 
-            <p>
-                Find answers to common questions about dental treatments
-                and services at Sai Manasa Dental Clinic.
-            </p>
+													<p>
+														Find answers to common questions about dental treatments
+														and services at Sai Manasa Dental Clinic.
+													</p>
 
-        </div>
+												</div>
 
 
-        <!-- FAQ List -->
-        <div class="sm-faq-list">
+												<!-- FAQ List -->
+												<div class="sm-faq-list">
 
 
-            <!-- FAQ 1 -->
-            <details class="sm-faq-card" open>
+													<!-- FAQ 1 -->
+													<details class="sm-faq-card" open>
 
-                <summary>
-                    Where is Sai Manasa Dental Clinic located?
+														<summary>
+															Where is Sai Manasa Dental Clinic located?
 
-                    <span class="faq-icon">+</span>
-                </summary>
+															<span class="faq-icon">+</span>
+														</summary>
 
-                <p>
-                    Sai Manasa Dental Clinic is located at
-                    6-2-250, Jaya Hospital Lane, Opp. Zubair Bookstall,
-                    Chowrasta, Kakaji Nagar Colony, Hanamkonda,
-                    Telangana - 506001.
-                </p>
+														<p>
+															Sai Manasa Dental Clinic is located at
+															6-2-250, Jaya Hospital Lane, Opp. Zubair Bookstall,
+															Chowrasta, Kakaji Nagar Colony, Hanamkonda,
+															Telangana - 506001.
+														</p>
 
-            </details>
+													</details>
 
 
-            <!-- FAQ 2 -->
-            <details class="sm-faq-card">
+													<!-- FAQ 2 -->
+													<details class="sm-faq-card">
 
-                <summary>
-                    What dental services do you provide?
+														<summary>
+															What dental services do you provide?
 
-                    <span class="faq-icon">+</span>
-                </summary>
+															<span class="faq-icon">+</span>
+														</summary>
 
-                <p>
-                    We provide comprehensive dental care including children's
-                    dentistry, dental implants, orthodontic treatment,
-                    root canal treatment, crowns and bridges, oral and
-                    maxillofacial surgery, laser dentistry and dentures.
-                </p>
+														<p>
+															We provide comprehensive dental care including children's
+															dentistry, dental implants, orthodontic treatment,
+															root canal treatment, crowns and bridges, oral and
+															maxillofacial surgery, laser dentistry and dentures.
+														</p>
 
-            </details>
+													</details>
 
 
-            <!-- FAQ 3 -->
-            <details class="sm-faq-card">
+													<!-- FAQ 3 -->
+													<details class="sm-faq-card">
 
-                <summary>
-                    Do you provide dental implant treatment?
+														<summary>
+															Do you provide dental implant treatment?
 
-                    <span class="faq-icon">+</span>
-                </summary>
+															<span class="faq-icon">+</span>
+														</summary>
 
-                <p>
-                    Yes. We provide dental implant treatment for replacing
-                    missing teeth. Dental implants are designed to provide
-                    a strong, functional and natural-looking replacement
-                    for missing teeth.
-                </p>
+														<p>
+															Yes. We provide dental implant treatment for replacing
+															missing teeth. Dental implants are designed to provide
+															a strong, functional and natural-looking replacement
+															for missing teeth.
+														</p>
 
-            </details>
+													</details>
 
 
-            <!-- FAQ 4 -->
-            <details class="sm-faq-card">
+													<!-- FAQ 4 -->
+													<details class="sm-faq-card">
 
-                <summary>
-                    Do you provide dental treatment for children?
+														<summary>
+															Do you provide dental treatment for children?
 
-                    <span class="faq-icon">+</span>
-                </summary>
+															<span class="faq-icon">+</span>
+														</summary>
 
-                <p>
-                    Yes. We provide gentle and professional dental care for
-                    children, including preventive dental care, cavity
-                    treatment and guidance for maintaining healthy teeth
-                    and gums.
-                </p>
+														<p>
+															Yes. We provide gentle and professional dental care for
+															children, including preventive dental care, cavity
+															treatment and guidance for maintaining healthy teeth
+															and gums.
+														</p>
 
-            </details>
+													</details>
 
 
-            <!-- FAQ 5 -->
-            <details class="sm-faq-card">
+													<!-- FAQ 5 -->
+													<details class="sm-faq-card">
 
-                <summary>
-                    Do you provide braces and orthodontic treatment?
+														<summary>
+															Do you provide braces and orthodontic treatment?
 
-                    <span class="faq-icon">+</span>
-                </summary>
+															<span class="faq-icon">+</span>
+														</summary>
 
-                <p>
-                    Yes. Our orthodontic treatments help diagnose and correct
-                    dental and facial irregularities. Treatment options may
-                    include braces and other orthodontic solutions depending
-                    on the patient's dental condition.
-                </p>
+														<p>
+															Yes. Our orthodontic treatments help diagnose and correct
+															dental and facial irregularities. Treatment options may
+															include braces and other orthodontic solutions depending
+															on the patient's dental condition.
+														</p>
 
-            </details>
+													</details>
 
 
-            <!-- FAQ 6 -->
-            <details class="sm-faq-card">
+													<!-- FAQ 6 -->
+													<details class="sm-faq-card">
 
-                <summary>
-                    Is root canal treatment available?
+														<summary>
+															Is root canal treatment available?
 
-                    <span class="faq-icon">+</span>
-                </summary>
+															<span class="faq-icon">+</span>
+														</summary>
 
-                <p>
-                    Yes. Root canal treatment is available for teeth affected
-                    by infection or damage to the dental pulp. The treatment
-                    helps preserve the natural tooth and relieve discomfort.
-                </p>
+														<p>
+															Yes. Root canal treatment is available for teeth affected
+															by infection or damage to the dental pulp. The treatment
+															helps preserve the natural tooth and relieve discomfort.
+														</p>
 
-            </details>
+													</details>
 
 
-            <!-- FAQ 7 -->
-            <details class="sm-faq-card">
+													<!-- FAQ 7 -->
+													<details class="sm-faq-card">
 
-                <summary>
-                    Do you provide crowns and bridges?
+														<summary>
+															Do you provide crowns and bridges?
 
-                    <span class="faq-icon">+</span>
-                </summary>
+															<span class="faq-icon">+</span>
+														</summary>
 
-                <p>
-                    Yes. Dental crowns are used to restore the shape,
-                    appearance and strength of damaged teeth, while dental
-                    bridges can be used to replace one or more missing teeth.
-                </p>
+														<p>
+															Yes. Dental crowns are used to restore the shape,
+															appearance and strength of damaged teeth, while dental
+															bridges can be used to replace one or more missing teeth.
+														</p>
 
-            </details>
+													</details>
 
 
-            <!-- FAQ 8 -->
-            <details class="sm-faq-card">
+													<!-- FAQ 8 -->
+													<details class="sm-faq-card">
 
-                <summary>
-                    Do you provide dentures?
+														<summary>
+															Do you provide dentures?
 
-                    <span class="faq-icon">+</span>
-                </summary>
+															<span class="faq-icon">+</span>
+														</summary>
 
-                <p>
-                    Yes. We provide denture solutions to help replace missing
-                    teeth and restore your ability to smile, speak and eat
-                    comfortably.
-                </p>
+														<p>
+															Yes. We provide denture solutions to help replace missing
+															teeth and restore your ability to smile, speak and eat
+															comfortably.
+														</p>
 
-            </details>
+													</details>
 
 
-            <!-- FAQ 9 -->
-            <details class="sm-faq-card">
+													<!-- FAQ 9 -->
+													<details class="sm-faq-card">
 
-                <summary>
-                    Do you provide oral surgery and laser dentistry?
+														<summary>
+															Do you provide oral surgery and laser dentistry?
 
-                    <span class="faq-icon">+</span>
-                </summary>
+															<span class="faq-icon">+</span>
+														</summary>
 
-                <p>
-                    Yes. Sai Manasa Dental Clinic provides oral and
-                    maxillofacial surgical treatment along with modern
-                    laser dentistry for selected dental and gum procedures.
-                </p>
+														<p>
+															Yes. Sai Manasa Dental Clinic provides oral and
+															maxillofacial surgical treatment along with modern
+															laser dentistry for selected dental and gum procedures.
+														</p>
 
-            </details>
+													</details>
 
 
-            <!-- FAQ 10 -->
-            <details class="sm-faq-card">
+													<!-- FAQ 10 -->
+													<details class="sm-faq-card">
 
-                <summary>
-                    How can I book an appointment?
+														<summary>
+															How can I book an appointment?
 
-                    <span class="faq-icon">+</span>
-                </summary>
+															<span class="faq-icon">+</span>
+														</summary>
 
-                <p>
-                    You can book an appointment by contacting Sai Manasa
-                    Dental Clinic at +91 6281677760 or by using the
-                    appointment option available on our website.
-                </p>
+														<p>
+															You can book an appointment by contacting Sai Manasa
+															Dental Clinic at +91 6281677760 or by using the
+															appointment option available on our website.
+														</p>
 
-            </details>
+													</details>
 
 
-        </div>
+												</div>
 
 
-        <!-- Appointment Button -->
-        <div class="sm-faq-bottom">
+												<!-- Appointment Button -->
+												<div class="sm-faq-bottom">
 
-            <a href="contact.html" class="sm-faq-button">
-                Book an Appointment
-            </a>
+													<a href="appointmentbook.html" class="sm-faq-button">
+														Book an Appointment
+													</a>
 
-        </div>
+												</div>
 
-    </div>
+											</div>
 
-</section>
+										</section>
 
 
 
 
-<!-- =========================
-     FAQ SECTION END
-========================= -->
+										<!-- =========================
+											FAQ SECTION END
+										========================= -->
+
+										<!-- =====================================
+											BEFORE & AFTER GALLERY SECTION
+										===================================== -->
+
+										<section id="before-after" class="sm-gallery-section">
+
+											<div class="sm-gallery-container">
+
+												<!-- Section Heading -->
+												<div class="sm-gallery-heading">
+
+													<span class="sm-gallery-eyebrow">
+														SMILE TRANSFORMATIONS
+													</span>
+
+													<h2>Before & After Dental Results</h2>
+
+													<p>
+														Explore some of the dental treatment transformations
+														at Sai Manasa Dental Clinic.
+													</p>
+
+												</div>
+
+
+												<!-- Gallery Grid -->
+												<div class="sm-gallery-grid">
+
+
+													<!-- Gallery Image 1 -->
+													<div class="sm-gallery-card">
+
+														<div class="sm-gallery-image">
+															<img src="images/gallery-1.jpeg"
+																alt="Before and after dental treatment">
+														</div>
+
+														<div class="sm-gallery-content">
+															<h3>Smile Restoration</h3>
+
+															<p>
+																Before and after dental treatment transformation.
+															</p>
+														</div>
+
+													</div>
+
+
+													<!-- Gallery Image 2 -->
+													<div class="sm-gallery-card">
+
+														<div class="sm-gallery-image">
+															<img src="images/gallery-2.jpeg"
+																alt="Before and after composite veneers">
+														</div>
+
+														<div class="sm-gallery-content">
+															<h3>Composite Veneers</h3>
+
+															<p>
+																Smile improvement with personalized dental treatment.
+															</p>
+														</div>
+
+													</div>
+
+
+													<!-- Gallery Image 3 -->
+													<div class="sm-gallery-card">
+
+														<div class="sm-gallery-image">
+															<img src="images/gallery-3.jpeg"
+																alt="Root canal and zirconia treatment">
+														</div>
+
+														<div class="sm-gallery-content">
+															<h3>Root Canal & Zirconia Crown</h3>
+
+															<p>
+																Dental restoration treatment for a healthier smile.
+															</p>
+														</div>
+
+													</div>
+
+
+													<!-- Gallery Image 4 -->
+													<div class="sm-gallery-card">
+
+														<div class="sm-gallery-image">
+															<img src="images/gallery-4.jpeg"
+																alt="Dental trauma treatment">
+														</div>
+
+														<div class="sm-gallery-content">
+															<h3>Dental Trauma Treatment</h3>
+
+															<p>
+																Treatment to restore and stabilize damaged teeth.
+															</p>
+														</div>
+
+													</div>
+
+
+													<!-- Gallery Image 5 -->
+													<div class="sm-gallery-card">
+
+														<div class="sm-gallery-image">
+															<img src="images/gallery-5.jpeg"
+																alt="Laser frenectomy treatment">
+														</div>
+
+														<div class="sm-gallery-content">
+															<h3>Laser Frenectomy</h3>
+
+															<p>
+																Advanced dental treatment for improved tongue movement.
+															</p>
+														</div>
+
+													</div>
+
+
+												</div>
+
+
+												<!-- Bottom Section -->
+												<div class="sm-gallery-bottom">
+
+													<p>
+														Every patient's dental condition is unique. Treatment results
+														may vary depending on individual conditions and treatment requirements.
+													</p>
+
+													<a href="appointmentbook.html" class="sm-gallery-button">
+														Book Your Consultation
+													</a>
+
+												</div>
+
+
+											</div>
+
+										</section>
+										<br>
+										<br><br>     	
 
 										<div class="elementor-element elementor-element-86c7d17 pbmit-bg-color-yes pbmit-elementor-bg-color-light e-con-full pbmit-bg-color-over-image e-flex e-con e-parent"
 											data-id="86c7d17" data-element_type="container" data-e-type="container"
