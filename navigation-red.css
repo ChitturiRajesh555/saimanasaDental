@@ -1,0 +1,7 @@
+#site-navigation.pbmit-navbar > div > ul > li:hover > a,
+#site-navigation.pbmit-navbar > div > ul > li.current-menu-item > a,
+#site-navigation.pbmit-navbar > div > ul > li.current_page_item > a,
+#site-navigation.pbmit-navbar ul ul li:hover > a,
+#site-navigation.pbmit-navbar ul ul li.current-menu-item > a {
+    color: #d71920 !important;
+}
