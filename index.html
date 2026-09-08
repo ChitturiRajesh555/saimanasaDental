@@ -846,6 +846,23 @@
 		.pbmit-slider-area sr7-slide>a {
 			top: 62%;
 		}
+
+		@media (max-width: 767px) {
+			.pbmit-slider-area sr7-module {
+				height: auto;
+				aspect-ratio: 1600 / 700;
+				min-height: 0;
+			}
+
+			.pbmit-slider-area sr7-bg img {
+				object-fit: contain;
+			}
+
+			.pbmit-slider-area sr7-txt,
+			.pbmit-slider-area sr7-slide>a {
+				display: none !important;
+			}
+		}
 	</style>
 <style>
 /* ==============================
@@ -4913,9 +4930,9 @@
 							(function () {
 								var slides = Array.from(document.querySelectorAll('.pbmit-slider-area sr7-slide')).slice(0, 3);
 								var images = [
-									'demo/wp-content/uploads/2026/02/demo2-slide-02.jpg',
-									'demo/wp-content/uploads/revslider/slider-demo-02/slider-02-slide-2.jpg',
-									'demo/wp-content/uploads/2026/02/demo2-slide-01.jpg'
+									'images/banner-1.jpeg',
+									'images/banner-2.jpeg',
+									'images/banner-3.jpeg'
 								];
 								if (!slides.length) return;
 								slides.forEach(function (slide, index) {
