@@ -1512,6 +1512,311 @@ color: #000!important;}
         color: #d71920 !important;
     }
 </style>
+<style>
+    /* =====================================================
+   READ MORE BUTTON
+===================================================== */
+
+.smd-blog-read-more {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+
+    margin-top: 15px;
+
+    color: #e53935;
+    font-size: 15px;
+    font-weight: 700;
+
+    text-decoration: none;
+
+    transition: all 0.3s ease;
+}
+
+.smd-blog-read-more span {
+    font-size: 18px;
+}
+
+.smd-blog-read-more:hover {
+    color: #b71c1c;
+    text-decoration: none;
+}
+
+
+/* =====================================================
+   BLOG MODAL
+===================================================== */
+
+.smd-blog-modal {
+    display: none;
+
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    z-index: 99999;
+
+    padding: 30px 15px;
+
+    overflow-y: auto;
+}
+
+
+/* DARK BACKGROUND */
+
+.smd-blog-modal-overlay {
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background: rgba(0,0,0,0.75);
+
+    z-index: -1;
+}
+
+
+/* POPUP BOX */
+
+.smd-blog-modal-content {
+    position: relative;
+
+    width: 100%;
+    max-width: 950px;
+
+    margin: 20px auto;
+
+    background: #ffffff;
+
+    border-radius: 15px;
+
+    padding: 45px;
+
+    box-shadow: 0 15px 60px rgba(0,0,0,0.25);
+
+    max-height: 90vh;
+
+    overflow-y: auto;
+}
+
+
+/* CLOSE BUTTON */
+
+.smd-blog-modal-close {
+    position: absolute;
+
+    top: 15px;
+    right: 20px;
+
+    width: 42px;
+    height: 42px;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background: #e53935;
+
+    color: #ffffff;
+
+    font-size: 28px;
+
+    line-height: 42px;
+
+    cursor: pointer;
+
+    z-index: 10;
+}
+
+.smd-blog-modal-close:hover {
+    background: #b71c1c;
+}
+
+
+/* ARTICLE */
+
+.blog-article-content {
+    display: none;
+}
+
+.blog-article-content.active {
+    display: block;
+}
+
+
+/* CATEGORY */
+
+.smd-modal-category {
+    display: inline-block;
+
+    padding: 6px 15px;
+
+    background: #e53935;
+
+    color: #ffffff;
+
+    border-radius: 30px;
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    margin-bottom: 12px;
+}
+
+
+/* TITLE */
+
+.blog-article-content h2 {
+    color: #172b4d;
+
+    font-size: 34px;
+
+    line-height: 1.3;
+
+    margin: 10px 0 12px;
+}
+
+
+/* SUB HEADINGS */
+
+.blog-article-content h3 {
+    color: #172b4d;
+
+    font-size: 23px;
+
+    margin-top: 30px;
+
+    margin-bottom: 10px;
+}
+
+
+/* META */
+
+.smd-modal-meta {
+    color: #777;
+
+    font-size: 14px;
+
+    margin-bottom: 25px;
+}
+
+
+/* IMAGE */
+
+.smd-modal-image {
+    width: 100%;
+
+    max-height: 420px;
+
+    object-fit: cover;
+
+    border-radius: 12px;
+
+    margin-bottom: 25px;
+}
+
+
+/* TEXT */
+
+.blog-article-content p {
+    color: #444;
+
+    font-size: 16px;
+
+    line-height: 1.8;
+
+    margin-bottom: 18px;
+}
+
+
+/* LIST */
+
+.blog-article-content ul,
+.blog-article-content ol {
+    padding-left: 25px;
+
+    margin-bottom: 20px;
+}
+
+.blog-article-content li {
+    margin-bottom: 8px;
+
+    line-height: 1.7;
+}
+
+
+/* TABLE */
+
+.smd-modal-table {
+    width: 100%;
+
+    border-collapse: collapse;
+
+    margin: 25px 0;
+}
+
+.smd-modal-table th,
+.smd-modal-table td {
+    border: 1px solid #ddd;
+
+    padding: 12px;
+
+    text-align: left;
+}
+
+.smd-modal-table th {
+    background: #f2f6f8;
+
+    color: #172b4d;
+}
+
+
+/* MOBILE */
+
+@media(max-width:767px) {
+
+    .smd-blog-modal {
+        padding: 15px 10px;
+    }
+
+    .smd-blog-modal-content {
+        padding: 35px 20px 25px;
+
+        margin: 10px auto;
+
+        max-height: 94vh;
+    }
+
+    .blog-article-content h2 {
+        font-size: 27px;
+    }
+
+    .blog-article-content h3 {
+        font-size: 20px;
+    }
+
+    .blog-article-content p {
+        font-size: 15px;
+    }
+
+    .smd-modal-image {
+        max-height: 280px;
+    }
+
+    .smd-modal-table {
+        font-size: 13px;
+    }
+
+}
+</style>
 <link rel="icon" type="image/x-icon" href="images/favicon.ico">
 </head>
 <body class="blog wp-embed-responsive wp-theme-smiliz  pbmit-top-menu-total-5 pbmit-sidebar-exists pbmit-sidebar-right elementor-default elementor-kit-10">
@@ -1685,6 +1990,66 @@ color: #000!important;}
 
             <!-- Blog Grid -->
             <div class="smd-blog-grid">
+                
+                <!-- ================= BLOG 7 ================= -->
+                <article class="smd-blog-card">
+
+                    <div class="smd-blog-image">
+
+                        <a href="#">
+                            <img
+                                src="images/invisalign-aligners.jpeg"
+                                alt="Invisalign Aligners">
+                        </a>
+
+                        <span class="smd-blog-category">
+                            Invisalign Aligners
+                        </span>
+
+                    </div>
+
+
+                    <div class="smd-blog-content">
+
+                        <div class="smd-blog-meta">
+
+                            <span>
+                                <i class="fa fa-calendar"></i>
+                                September 21, 2026
+                            </span>
+
+                            <span>
+                                <i class="fa fa-user"></i>
+                                Sai Manasa Dental Clinic
+                            </span>
+
+                        </div>
+
+
+                        <h3>
+                            <a href="#">
+                                Invisalign Aligners in Hanamkonda, Warangal:
+                                A Clear & Comfortable Way to Straighten Your Teeth
+                            </a>
+                        </h3>
+
+
+                        <p>
+                            Invisalign aligners offer a clear and removable
+                            option for selected tooth-alignment problems.
+                            Learn how clear aligners can help create a
+                            straighter and more confident smile.
+                        </p>
+
+                        <a href="javascript:void(0)"
+                        class="smd-blog-read-more"
+                        onclick="openBlogModal(7)">
+                            Read More <span>→</span>
+                        </a>
+
+                    </div>
+
+                </article>
 
 
                 <!-- ================= BLOG 1 ================= -->
@@ -1736,6 +2101,12 @@ color: #000!important;}
                             monitor tooth development and teach children
                             healthy oral-care habits for a stronger smile.
                         </p>
+
+                        <a href="javascript:void(0)"
+                        class="smd-blog-read-more"
+                        onclick="openBlogModal(1)">
+                            Read More <span>→</span>
+                        </a>
                     </div>
 
                 </article>
@@ -1791,6 +2162,11 @@ color: #000!important;}
                             provide a reliable solution designed to replace
                             missing teeth and restore confidence.
                         </p>
+                        <a href="javascript:void(0)"
+                        class="smd-blog-read-more"
+                        onclick="openBlogModal(2)">
+                            Read More <span>→</span>
+                        </a>
                     </div>
 
                 </article>
@@ -1846,7 +2222,11 @@ color: #000!important;}
                             smile. Learn how braces and modern aligners
                             can help correct dental and facial irregularities.
                         </p>
-
+                        <a href="javascript:void(0)"
+                        class="smd-blog-read-more"
+                        onclick="openBlogModal(3)">
+                            Read More <span>→</span>
+                        </a>
 
                         
 
@@ -1904,6 +2284,11 @@ color: #000!important;}
                             Root canal treatment can remove infected tissue
                             while helping preserve your natural tooth.
                         </p>
+                        <a href="javascript:void(0)"
+                        class="smd-blog-read-more"
+                        onclick="openBlogModal(4)">
+                            Read More <span>→</span>
+                        </a>
 
                     </div>
 
@@ -1960,6 +2345,11 @@ color: #000!important;}
                             Both treatments can improve appearance,
                             function and confidence in your smile.
                         </p>
+                        <a href="javascript:void(0)"
+                        class="smd-blog-read-more"
+                        onclick="openBlogModal(5)">
+                            Read More <span>→</span>
+                        </a>
 
                     </div>
 
@@ -2012,12 +2402,19 @@ color: #000!important;}
                         <p>
                             Oral and maxillofacial surgery focuses on diagnosing and treating conditions that affect the mouth, palate, and mouth. This special surgery addresses topics such as wisdom teeth extraction, jaw replacement, rhinoplasty, and cosmetic surgery. 
                         </p>
+                        <a href="javascript:void(0)"
+                        class="smd-blog-read-more"
+                        onclick="openBlogModal(6)">
+                            Read More <span>→</span>
+                        </a>
                     </div>
 
                 </article>
-
-
             </div>
+
+
+            
+            
 
 
 
@@ -2422,7 +2819,73 @@ var wpforms_user_journey = {"is_ssl":"1","is_debug":"","storage_name":"_wpfuj","
 //# sourceURL=wpforms-user-journey-js-extra
 </script>
 <script id="wpforms-user-journey-js">let WPFormsUserJourney=window.WPFormsUserJourney||((n,s)=>{let u={init(){u.checkCleanupCookie();let e=u.getUserJourneyData();var r=Math.round(Date.now()/1e3);0!==Object.keys(e).length||""===n.referrer||n.referrer.startsWith(s.location.origin)||(e[r-2]=n.referrer+"|#|{ReferrerPageTitle}");let t=s.location.href+"|#|"+n.title;"undefined"!=typeof wpforms_user_journey&&wpforms_user_journey.page_id&&(t+="|#|"+Number(wpforms_user_journey.page_id));var o=encodeURIComponent(u.addSlashes(t)),a=u.getLatestTimeStamp(e);e[a]===o&&delete e[a],e[r]=o,e=u.getLastData(e),u.setUserJourneyInputs(e),u.setUserJourneyData(e)},getObjectKeysAsNumbers(e){return Object.keys(e).map(e=>Number.parseInt(e,10))},getLatestTimeStamp(e){e=u.getObjectKeysAsNumbers(e);return Math.max(...e).toString()},checkCleanupCookie(){u.createCookie("_wpfuj","",0),"1"===u.getCookie(wpforms_user_journey.cleanup_cookie_name)&&(localStorage.removeItem(wpforms_user_journey.storage_name),u.createCookie(wpforms_user_journey.cleanup_cookie_name,"",0))},setUserJourneyInputs(t){let o=wpforms_user_journey.storage_name;n.querySelectorAll("form.wpforms-form").forEach(e=>{let r=e.querySelector(`input[name="${o}"]`);r||((r=n.createElement("input")).type="hidden",r.name=o,e.appendChild(r)),r.value=JSON.stringify(t)})},setUserJourneyData(e){u.setLocalStorage(JSON.stringify(e))},setLocalStorage(e){try{localStorage.setItem(wpforms_user_journey.storage_name,e)}catch(e){u.debug("Error setting local storage:",e)}},getLastData(e){var r=Object.entries(e).sort(([e],[r])=>Number(e)-Number(r)),t=[];let o=2;var a=Math.floor(Date.now()/1e3)-31536e3;for(let e=r.length-1;0<=e;--e){var[s,n]=r[e];if(Number(s)<a)break;if(t.length>=wpforms_user_journey.max_data_items)break;var u=String(s).length+String(n).length+6;if(o+u>wpforms_user_journey.max_data_size)break;o+=u,t.push([s,n])}return Object.fromEntries(t)},getUserJourneyData(){let e={};try{var r=JSON.parse(u.getLocalStorage());r&&"object"==typeof r&&!Array.isArray(r)&&(e=r)}catch(e){u.debug("Error parsing JSON:",e)}return e},getLocalStorage(){let e=null;try{e=localStorage.getItem(wpforms_user_journey.storage_name)}catch(e){u.debug("Error getting local storage:",e)}return e},createCookie(e,r,t){let o="",a="";var s;wpforms_user_journey.is_ssl&&(a=";secure"),o=t?-1===t?"":((s=new Date).setTime(s.getTime()+24*t*60*60*1e3),";expires="+s.toGMTString()):";expires=Thu, 01 Jan 1970 00:00:01 GMT",n.cookie=e+"="+r+o+";path=/;samesite=strict"+a},getCookie(e){var r,t=e+"=";for(r of n.cookie.split(";")){let e=r;for(;" "===e.charAt(0);)e=e.substring(1,e.length);if(0===e.indexOf(t))return e.substring(t.length,e.length)}return null},addSlashes(e){return(e+"").replace(/[\\"]/g,"\\$&")},debug(...e){wpforms_user_journey.is_debug&&console.log("User Journey:",...e)}};return u})(document,window);WPFormsUserJourney.init();</script>
+<script>
 
+
+        function openBlogModal(blogNumber) {
+
+            var modal = document.getElementById("blogModal");
+
+            var articles = document.querySelectorAll(
+                ".blog-article-content"
+            );
+
+            // Hide all articles
+            articles.forEach(function(article) {
+
+                article.classList.remove("active");
+
+            });
+
+
+            // Show selected article
+            var selectedArticle =
+                document.getElementById(
+                    "blogArticle" + blogNumber
+                );
+
+            if (selectedArticle) {
+
+                selectedArticle.classList.add("active");
+
+            }
+
+
+            // Show popup
+            modal.style.display = "block";
+
+
+            // Prevent background scrolling
+            document.body.style.overflow = "hidden";
+
+        }
+
+
+        function closeBlogModal() {
+
+            var modal = document.getElementById("blogModal");
+
+            modal.style.display = "none";
+
+            // Enable page scrolling
+            document.body.style.overflow = "";
+
+        }
+
+
+        // Close popup when ESC is pressed
+
+        document.addEventListener("keydown", function(event) {
+
+            if (event.key === "Escape") {
+
+                closeBlogModal();
+
+            }
+
+        });
+
+</script>    
 
 
 
