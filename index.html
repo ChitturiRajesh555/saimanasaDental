@@ -1431,6 +1431,436 @@
 }
 
 </style>
+<style>
+/* =========================================
+   OUR OFFICE SECTION
+========================================= */
+
+.our-office-section {
+    width: 100%;
+    padding: 60px 0;
+    background: #ffffff;
+}
+
+.our-office-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 25px;
+
+    display: flex;
+    gap: 45px;
+    align-items: flex-start;
+}
+
+
+/* =========================================
+   LEFT CONTENT
+========================================= */
+
+.office-content {
+    width: 40%;
+}
+
+.office-content h2 {
+    margin: 0;
+    font-size: 32px;
+    font-weight: 600;
+    color: #333;
+}
+
+.office-title-line {
+    width: 42px;
+    height: 3px;
+    background: #0875d1;
+    margin: 18px 0 32px;
+}
+
+.office-content p {
+    margin: 0;
+    font-size: 15px;
+    line-height: 1.7;
+    color: #222;
+}
+
+.office-content h3 {
+    margin-top: 30px;
+    margin-bottom: 25px;
+
+    font-size: 24px;
+    font-weight: 600;
+    color: #333;
+}
+
+
+/* =========================================
+   AMENITIES
+========================================= */
+
+.amenities-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.amenities-list li {
+    position: relative;
+
+    padding-left: 20px;
+    margin-bottom: 15px;
+
+    font-size: 14px;
+    color: #222;
+}
+
+.amenities-list li::before {
+    content: "✓";
+
+    position: absolute;
+    left: 0;
+    top: 0;
+
+    color: #0875d1;
+    font-weight: bold;
+}
+
+
+/* =========================================
+   RIGHT GALLERY
+========================================= */
+
+.office-gallery {
+    width: 60%;
+}
+
+
+/* Main Image */
+
+.main-office-image {
+    width: 100%;
+    height: 390px;
+    position: relative;
+    overflow: hidden;
+}
+
+.main-office-image img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+}
+
+
+/* =========================================
+   GALLERY ARROWS
+========================================= */
+
+.gallery-arrow {
+    position: absolute;
+
+    top: 50%;
+    transform: translateY(-50%);
+
+    width: 42px;
+    height: 58px;
+
+    border: none;
+    background: #ffffff;
+
+    color: #0875d1;
+
+    font-size: 22px;
+
+    cursor: pointer;
+
+    z-index: 5;
+}
+
+.left-arrow {
+    left: 0;
+    border-radius: 0 10px 10px 0;
+}
+
+.right-arrow {
+    right: 0;
+    border-radius: 10px 0 0 10px;
+}
+
+.gallery-arrow:hover {
+    background: #f2f2f2;
+}
+
+
+/* =========================================
+   THUMBNAILS
+========================================= */
+
+.office-thumbnails {
+    margin-top: 10px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 8px;
+}
+
+.thumbnail-list {
+    flex: 1;
+
+    display: flex;
+    gap: 8px;
+
+    overflow: hidden;
+}
+
+.office-thumb {
+    width: calc(20% - 7px);
+    height: 74px;
+
+    flex-shrink: 0;
+
+    object-fit: cover;
+
+    cursor: pointer;
+
+    border: 2px solid transparent;
+
+    transition: 0.2s;
+}
+
+.office-thumb:hover,
+.office-thumb.active {
+    border-color: #0875d1;
+}
+
+
+/* Thumbnail arrows */
+
+.thumbnail-arrow {
+    width: 35px;
+    height: 55px;
+
+    border: none;
+
+    background: #ffffff;
+
+    color: #0875d1;
+
+    font-size: 20px;
+
+    cursor: pointer;
+
+    box-shadow: 0 0 5px rgba(0,0,0,0.08);
+}
+
+.thumbnail-arrow:hover {
+    background: #f5f5f5;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 991px) {
+
+    .our-office-container {
+        flex-direction: column;
+    }
+
+    .office-content,
+    .office-gallery {
+        width: 100%;
+    }
+
+    .main-office-image {
+        height: 400px;
+    }
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+    .our-office-section {
+        padding: 40px 0;
+    }
+
+    .our-office-container {
+        padding: 0 15px;
+        gap: 35px;
+    }
+
+    .office-content h2 {
+        font-size: 28px;
+    }
+
+    .office-content p {
+        font-size: 14px;
+    }
+
+    .main-office-image {
+        height: 260px;
+    }
+
+    .office-thumb {
+        height: 60px;
+    }
+
+    .thumbnail-arrow {
+        width: 28px;
+    }
+}
+</style>
+
+/* ================================
+   OUR ADVANTAGES SECTION
+================================ */
+<style>
+.advantages-section {
+    width: 100%;
+    background: #f5f6f7;
+    padding: 0;
+}
+
+.advantages-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: stretch;
+}
+
+/* Left Side */
+.advantages-content {
+    width: 50%;
+    padding: 35px 40px;
+    background: #f5f6f7;
+}
+
+.advantages-content h2 {
+    margin: 0 0 20px;
+    font-size: 30px;
+    font-weight: 600;
+    color: #333;
+}
+
+.advantages-content h2 span {
+    color: #0875d1;
+}
+
+/* Lists */
+.advantages-lists {
+    display: flex;
+    gap: 35px;
+}
+
+.advantages-lists ul {
+    width: 50%;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.advantages-lists li {
+    position: relative;
+    padding-left: 16px;
+    margin-bottom: 11px;
+    font-size: 13px;
+    line-height: 1.4;
+    color: #333;
+}
+
+/* Blue Tick */
+.advantages-lists li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: #0875d1;
+    font-weight: bold;
+    font-size: 13px;
+}
+
+/* Right Image */
+.advantages-image {
+    width: 50%;
+    overflow: hidden;
+}
+
+.advantages-image img {
+    width: 100%;
+    height: 100%;
+    min-height: 300px;
+    display: block;
+    object-fit: cover;
+}
+
+
+/* ================================
+   TABLET
+================================ */
+
+@media (max-width: 991px) {
+
+    .advantages-container {
+        flex-direction: column;
+    }
+
+    .advantages-content {
+        width: 100%;
+        padding: 35px 30px;
+    }
+
+    .advantages-image {
+        width: 100%;
+    }
+
+    .advantages-image img {
+        height: 350px;
+    }
+}
+
+
+/* ================================
+   MOBILE
+================================ */
+
+@media (max-width: 600px) {
+
+    .advantages-content {
+        padding: 30px 20px;
+    }
+
+    .advantages-content h2 {
+        font-size: 26px;
+        text-align: center;
+    }
+
+    .advantages-lists {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .advantages-lists ul {
+        width: 100%;
+    }
+
+    .advantages-lists li {
+        font-size: 13px;
+        margin-bottom: 10px;
+    }
+
+    .advantages-image img {
+        min-height: 250px;
+        height: 250px;
+    }
+}
+</style>
 
 <!-- =========================
      WHY CHOOSE US SECTION CSS
@@ -3904,6 +4334,149 @@
 											FAQ SECTION END
 										========================= -->
 
+
+										<!-- Our Advantages Section -->
+
+										<section class="advantages-section">
+											<div class="advantages-container">
+
+												<!-- Left Content -->
+												<div class="advantages-content">
+
+													<h2>Our <span>Advantages</span></h2>
+
+													<div class="advantages-lists">
+
+														<!-- First Column -->
+														<ul>
+															<li>Specialists and Dentists as One Team</li>
+															<li>Initial Dental Assessment</li>
+															<li>All Types of Dental Services</li>
+															<li>Safety by Credentials</li>
+															<li>Dental Implant Experience</li>
+															<li>Innovation</li>
+															<li>3D Imaging Center</li>
+														</ul>
+
+														<!-- Second Column -->
+														<ul>
+															<li>On-site Laboratory</li>
+															<li>"Same Day" Dentistry</li>
+															<li>"Same Day" Dental Implants</li>
+															<li>Innovative Clinic Design</li>
+															<li>Complimentary Consultations</li>
+															<li>Insurance and Financing</li>
+															<li>Services Cost</li>
+														</ul>
+
+													</div>
+
+												</div>
+
+												<!-- Right Image -->
+												<div class="advantages-image">
+													<img src="images/banner-1.jpeg" 
+														alt="Dental Care">
+												</div>
+
+											</div>
+										</section>
+										<!-- Our Office Section -->
+										<section class="our-office-section">
+											<div class="our-office-container">
+
+												<!-- LEFT CONTENT -->
+												<div class="office-content">
+
+													<h2>Our Office</h2>
+
+													<div class="office-title-line"></div>
+
+													<p>
+														Our dental office is a state of the art dental facility
+														equipped with the newest technology, capable of
+														handling all of your dental needs. All of our operatories are
+														equipped with intraoral cameras that are able to show us,
+														on the TV screen, the precise treatment you might attain.
+													</p>
+
+													<h3>Amenities</h3>
+
+													<ul class="amenities-list">
+														<li>TV's in each treatment room</li>
+														<li>Complimentary coffee, Juice</li>
+														<li>Wireless Internet</li>
+														<li>Warm lavender towels</li>
+													</ul>
+
+												</div>
+
+
+												<!-- RIGHT GALLERY -->
+												<div class="office-gallery">
+
+													<!-- Main Image -->
+													<div class="main-office-image">
+
+														<button class="gallery-arrow left-arrow">
+															&#10094;
+														</button>
+
+														<img id="officeMainImage"
+															src="images/our office.jpeg"
+															alt="Our Dental Office">
+
+														<button class="gallery-arrow right-arrow">
+															&#10095;
+														</button>
+
+													</div>
+
+
+													<!-- Thumbnail Images -->
+													<div class="office-thumbnails">
+
+														<button class="thumbnail-arrow">
+															&#10094;
+														</button>
+
+														<div class="thumbnail-list">
+
+															<img src="images/office-1.jpeg" class="office-thumb active" onclick="changeOfficeImage(this)" alt="Dental Office">
+
+															<img src="images/facility-2.jpeg"
+																class="office-thumb"
+																onclick="changeOfficeImage(this)"
+																alt="Dental Reception">
+
+															<img src="images/facility-3.jpeg"
+																class="office-thumb"
+																onclick="changeOfficeImage(this)"
+																alt="Dental Clinic">
+
+															<img src="images/facility-4.jpeg"
+																class="office-thumb"
+																onclick="changeOfficeImage(this)"
+																alt="Dental Treatment Room">
+
+															<img src="images/facility-5.jpeg"
+																class="office-thumb"
+																onclick="changeOfficeImage(this)"
+																alt="Dental Office">
+
+														</div>
+
+														<button class="thumbnail-arrow">
+															&#10095;
+														</button>
+
+													</div>
+
+												</div>
+
+											</div>
+										</section>
+
 										<!-- =====================================
 											BEFORE & AFTER GALLERY SECTION
 										===================================== -->
@@ -4960,6 +5533,158 @@
 		}
 	</style>
 	<a class="local-appointment-tab" href="appointmentbook.html">Book Appointment</a>
+	<Script>
+	// ========================================
+// OUR OFFICE GALLERY
+// ========================================
+
+var officeCurrentIndex = 0;
+
+// Get all office thumbnails
+function getOfficeThumbnails() {
+    return document.querySelectorAll(".office-thumb");
+}
+
+
+// Change main image when thumbnail is clicked
+function changeOfficeImage(element) {
+
+    var mainImage = document.getElementById("officeMainImage");
+    var thumbnails = getOfficeThumbnails();
+
+    if (!mainImage || !element) {
+        return;
+    }
+
+    // Change main image
+    mainImage.src = element.src;
+
+    // Remove active class from all thumbnails
+    thumbnails.forEach(function (thumb, index) {
+
+        thumb.classList.remove("active");
+
+        // Find clicked thumbnail index
+        if (thumb === element) {
+            officeCurrentIndex = index;
+        }
+    });
+
+    // Add active class
+    element.classList.add("active");
+}
+
+
+// ========================================
+// NEXT IMAGE
+// ========================================
+
+function nextOfficeImage() {
+
+    var mainImage = document.getElementById("officeMainImage");
+    var thumbnails = getOfficeThumbnails();
+
+    if (!mainImage || thumbnails.length === 0) {
+        return;
+    }
+
+    // Increase index
+    officeCurrentIndex++;
+
+    // Go back to first image
+    if (officeCurrentIndex >= thumbnails.length) {
+        officeCurrentIndex = 0;
+    }
+
+    // Change image
+    mainImage.src = thumbnails[officeCurrentIndex].src;
+
+    // Update active thumbnail
+    thumbnails.forEach(function (thumb) {
+        thumb.classList.remove("active");
+    });
+
+    thumbnails[officeCurrentIndex].classList.add("active");
+}
+
+
+// ========================================
+// PREVIOUS IMAGE
+// ========================================
+
+function previousOfficeImage() {
+
+    var mainImage = document.getElementById("officeMainImage");
+    var thumbnails = getOfficeThumbnails();
+
+    if (!mainImage || thumbnails.length === 0) {
+        return;
+    }
+
+    // Decrease index
+    officeCurrentIndex--;
+
+    // Go to last image
+    if (officeCurrentIndex < 0) {
+        officeCurrentIndex = thumbnails.length - 1;
+    }
+
+    // Change image
+    mainImage.src = thumbnails[officeCurrentIndex].src;
+
+    // Update active thumbnail
+    thumbnails.forEach(function (thumb) {
+        thumb.classList.remove("active");
+    });
+
+    thumbnails[officeCurrentIndex].classList.add("active");
+}
+
+
+// ========================================
+// MAIN GALLERY ARROWS
+// ========================================
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    var leftArrow = document.querySelector(".left-arrow");
+    var rightArrow = document.querySelector(".right-arrow");
+
+    if (leftArrow) {
+        leftArrow.addEventListener("click", function () {
+            previousOfficeImage();
+        });
+    }
+
+    if (rightArrow) {
+        rightArrow.addEventListener("click", function () {
+            nextOfficeImage();
+        });
+    }
+
+
+    // ========================================
+    // THUMBNAIL ARROWS
+    // ========================================
+
+    var thumbnailArrows =
+        document.querySelectorAll(".thumbnail-arrow");
+
+    if (thumbnailArrows.length >= 2) {
+
+        // Left thumbnail arrow
+        thumbnailArrows[0].addEventListener("click", function () {
+            previousOfficeImage();
+        });
+
+        // Right thumbnail arrow
+        thumbnailArrows[1].addEventListener("click", function () {
+            nextOfficeImage();
+        });
+    }
+
+});
+</Script>
 </body>
 
 </html>
